@@ -68,7 +68,7 @@ nav .nav-social {
   transition: all 0.6s;
 }
 .menu ul li {
-  padding: 25px 0px;
+  /* padding: 25px 0px; */
 }
 .menu ul li a {
   color: #f9f6f6 !important;
