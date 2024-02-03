@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./imgs/logo.png" type="image/x-icon" />
+    <title>Movies App</title>
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- START NAVBAR -->
+    <nav class="position-fixed top-0 start-0 vh-100 z-3">
+      <div class="nav-logo">
+        <img src="imgs/logo.png" alt="logo" />
+      </div>
+      <div class="nav-icon">
+        <i class="fa-solid fa-align-justify"></i>
+      </div>
+      <div class="nav-social">
+        <i class="fa-solid fa-globe"></i>
+        <i class="fa-solid fa-share-nodes"></i>
+      </div>
+    </nav>
+    <div class="side-nav position-fixed top-0 start-0 vh-100">
+      <div class="menu">
+        <ul>
+          <li>
+            <a category="movie/now_playing">Now playing</a>
+          </li>
+          <li><a class="category" category="movie/popular">Popular</a></li>
+          <li><a class="category" category="movie/top_rated">Top Rated</a></li>
+          <li><a class="category" category="trending/all/day">Trending</a></li>
+          <li><a class="category" category="movie/upcoming">Upcoming</a></li>
+          <li class="contactLink"><a>Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="copyrights">
+        <div class="sidenav-social mb-4 ms-3">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-solid fa-globe"></i></a>
+        </div>
+        <p class="pt-3">
+          Copyright © 2024 All Rights Reserved. <br />Created by
+          <a
+            href="https://github.com/Ahmed-Walid2"
+            class="link-danger fw-bold"
+            target="_blank"
+            >Ahmed Walid</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <!-- END NAVBAR -->
+
+    <!-- START HOME -->
+    <section id="home" class="container py-5">
+      <input
+        id="search"
+        type="search"
+        placeholder="Search"
+        class="form-control w-50 mx-auto bg-transparent rounded-pill text-white shadow-none border-white px-3"
+      />
+      <div class="row gy-4 mt-3 text-white offset"></div>
+    </section>
+    <!-- END HOME -->
+
+    <!-- START CONTACT -->
+    <section id="contact" class="text-white py-5">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <input
+                type="text"
+                required
+                id="name"
+                maxlength="30"
+                class="form-control"
+                placeholder="Enter Your Name"
+              />
+              <span class="error nameError animate__animated text-danger mb-4"
+                >Invalid Name, only Characters allowed</span
+              >
+            </div>
+            <div class="col-md-6 mb-4">
+              <input
+                type="email"
+                required
+                id="email"
+                class="form-control"
+                placeholder="Enter Your Email"
+              />
+              <span class="error emailError animate__animated text-danger mb-4"
+                >Invalid Email, try example@domain.com</span
+              >
+            </div>
+            <div class="col-md-6 mb-4">
+              <input
+                type="number"
+                required
+                id="phone"
+                class="form-control"
+                placeholder="Enter Your Phone"
+              />
+              <span class="error phoneError animate__animated text-danger mb-4"
+                >Invalid Phone Number</span
+              >
+            </div>
+            <div class="col-md-6 mb-4">
+              <input
+                type="number"
+                required
+                id="age"
+                class="form-control"
+                placeholder="Enter Your Age"
+              />
+              <span class="error ageError animate__animated text-danger mb-4"
+                >Your age must be over 16+</span
+              >
+            </div>
+            <div class="col-md-6 mb-4 position-relative">
+              <div
+                class="show-pw d-flex align-content-center justify-content-between"
+              >
+                <input
+                  type="password"
+                  required
+                  id="password"
+                  class="form-control"
+                  placeholder="Enter Your Password"
+                />
+                <span class="showPass"
+                  ><i class="fa-solid fa-eye-slash"></i
+                ></span>
+              </div>
+
+              <span class="error pwError animate__animated text-danger mb-4"
+                >password must contain numbers & letters at least 8
+                character</span
+              >
+            </div>
+            <div class="col-md-6 mb-4">
+              <input
+                type="password"
+                required
+                id="repassword"
+                class="form-control"
+                placeholder="ReEnter Password"
+              />
+              <span class="error rePwError animate__animated text-danger mb-4"
+                >Password not match</span
+              >
+            </div>
+            <div class="col-md-12">
+              <button
+                type="submit"
+                class="form-btn rounded-2 mb-3 animate__animated"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- END CONTACT -->
+
+    <!-- START LOADER -->
+    <div class="loading">
+      <span class="loader"></span>
+    </div>
+    <!-- END LOADER -->
+
+    <!-- START BACK TO TOP -->
+    <div id="back-to-top">
+      <a href="#"><i class="fa-solid fa-arrow-up-long"></i></a>
+    </div>
+    <!-- END BACK TO TOP -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

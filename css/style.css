@@ -1,0 +1,288 @@
+/* START GLOBAL */
+html,
+body {
+  scroll-behavior: unset !important;
+}
+
+body {
+  background-color: #0d0d0d;
+  font-family: Segoe UI Light;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* END GLOBAL */
+
+/* START NAVBAR */
+nav {
+  background-color: #f8f6f6;
+  width: 60px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 0;
+  transition: all 0.6s;
+}
+
+nav .nav-logo {
+  padding: 25px 0;
+}
+nav .nav-logo img {
+  height: 48px;
+}
+
+nav .nav-icon i {
+  font-size: 25px;
+  font-weight: 900;
+  cursor: pointer;
+}
+nav .nav-social {
+  padding: 25px;
+}
+.side-nav {
+  background-color: #000;
+  width: 250px;
+  z-index: 5000;
+  padding: 0 10px;
+  margin-left: -250px;
+  transition: all 0.6s;
+}
+.menu ul li {
+  padding: 25px 0px;
+}
+.menu ul li a {
+  color: #f9f6f6 !important;
+  font-weight: 500;
+  cursor: pointer;
+}
+.menu ul li a:hover {
+  color: #ff655c !important;
+}
+
+.sidenav-social a {
+  color: #f9f6f6;
+  padding-left: 15px;
+  font-size: 14px;
+}
+.copyrights p {
+  color: rgb(153, 153, 153) !important;
+}
+
+/* END NAVBAR */
+
+/* START HOME */
+.card {
+  width: 90%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.card img {
+  min-height: 500px;
+  transition: all 1s;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.overlay h1 {
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+  transform: translatey(-200px);
+  transition: all 0.8s;
+}
+
+#desc,
+#iconRate,
+#rate,
+#date {
+  transform: translateX(-160%);
+  transition: all 0.8s;
+}
+.card:hover #desc,
+.card:hover #rate,
+.card:hover #iconRate,
+.card:hover #date {
+  transform: translateX(0);
+}
+
+#rate {
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid green;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+.card:hover img {
+  transform: rotate(8deg) scale(1.2);
+  filter: blur(2px);
+}
+
+.card:hover .overlay h1 {
+  transform: translate(0);
+}
+/* END HOME */
+
+/* START CONTACT */
+
+#contact .form-control {
+  box-shadow: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-color: #ced4da;
+  border-radius: 0;
+  color: #fff;
+}
+
+.form-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 25px;
+  transition: all 0.3s;
+  border: none;
+}
+
+.error-btn {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 10px 25px;
+  transition: all 0.3s;
+  border: none;
+}
+.form-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.error {
+  font-size: 18px;
+  display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* END CONTACT */
+
+/* START LOADER */
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  z-index: 9999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #fff;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* END LOADER */
+
+/* START BACK TO TOP */
+#back-to-top {
+  position: fixed;
+  background-color: #000;
+  height: 40px;
+  width: 40px;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  box-shadow: 0px 5px 15px rgb(0 0 0 / 15%);
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+}
+#back-to-top i {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+/* END BACK TO TOP */
+
+@media (max-width: 1045px) {
+  nav {
+    background-color: transparent;
+  }
+  nav .nav-logo,
+  nav .nav-social {
+    opacity: 0;
+  }
+  nav .nav-icon i {
+    color: #fff;
+  }
+}
