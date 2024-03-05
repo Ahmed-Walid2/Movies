@@ -21,11 +21,13 @@ $(".menu ul li a.category").on("click", function (e) {
   let categoryData = $(e.target).attr("category");
   getMovie(categoryData);
   backTop();
+  closeNav();
 });
 
 $(".menu ul li.contactLink").on("click", function () {
   let position = $("#contact").offset().top;
   $("html, body").animate({ scrollTop: position }, 1500);
+  closeNav();
 });
 
 $("#back-to-top").on("click", backTop);
